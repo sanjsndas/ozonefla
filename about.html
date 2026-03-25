@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About Us | Ozone Flora Hub - Our Story & Red Garden Philosophy</title>
+  <meta name="description" content="Discover the story behind Ozone Flora Hub — our mission, passionate team, and dedication to red-themed gardening, sustainability, and horticultural education.">
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff9f7;
+      color: #2d2a24;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* RED THEME COLORS */
+    :root {
+      --primary-red: #c23b22;
+      --primary-dark: #9b2e1a;
+      --primary-soft: #e35f3e;
+      --accent-gold: #e6b422;
+      --light-red-bg: #fff2ef;
+      --gray-mild: #f5f0ed;
+      --footer-dark: #1f1b17;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header (consistent with index) */
+    .header {
+      background: white;
+      box-shadow: 0 6px 18px rgba(194, 59, 34, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--primary-red);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 18px 0;
+    }
+    .logo h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--primary-red) 30%, #b94428 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #7e6b5c;
+      display: block;
+      letter-spacing: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #2c2823;
+      transition: 0.2s;
+      font-size: 1.05rem;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary-red);
+      border-bottom: 2px solid var(--primary-red);
+      padding-bottom: 6px;
+    }
+
+    /* page hero about */
+    .about-hero {
+      background: linear-gradient(112deg, #fff3ef 0%, #ffe4db 100%);
+      padding: 64px 0 70px;
+      border-bottom: 1px solid #ffd9cf;
+    }
+    .about-hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 48px;
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: #281f19;
+    }
+    .about-text .red-accent {
+      color: var(--primary-red);
+    }
+    .about-text p {
+      font-size: 1.2rem;
+      margin: 24px 0 20px;
+      color: #4a3e35;
+    }
+    .about-image {
+      flex: 1;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .about-image:hover img {
+      transform: scale(1.02);
+    }
+
+    /* section styles */
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 70px;
+      height: 4px;
+      background: var(--primary-red);
+      border-radius: 4px;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-header .section-title:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* mission & values cards */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin: 48px 0;
+    }
+    .value-card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: all 0.25s;
+      border: 1px solid #ffe3da;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary-soft);
+      box-shadow: 0 20px 30px -12px rgba(194,59,34,0.15);
+    }
+    .value-icon {
+      font-size: 2.8rem;
+      color: var(--primary-red);
+      margin-bottom: 20px;
+    }
+    .value-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 16px;
+      color: #c23b22;
+    }
+    .value-card p {
+      color: #4b413a;
+    }
+
+    /* team members */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      margin: 48px 0;
+    }
+    .team-member {
+      background: white;
+      border-radius: 32px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.05);
+      transition: 0.2s;
+      border: 1px solid #ffe0d6;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary-soft);
+    }
+    .team-img {
+      height: 280px;
+      overflow: hidden;
+    }
+    .team-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s;
+    }
+    .team-member:hover .team-img img {
+      transform: scale(1.04);
+    }
+    .team-info {
+      padding: 24px 16px 28px;
+    }
+    .team-info h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-red);
+    }
+    .team-info .role {
+      font-weight: 600;
+      color: #b1624a;
+      margin: 8px 0 12px;
+      letter-spacing: -0.2px;
+    }
+    .team-info p {
+      color: #5c4c41;
+      font-size: 0.95rem;
+    }
+
+    /* long story section */
+    .story-section {
+      background: var(--light-red-bg);
+      padding: 64px 0;
+      margin: 48px 0 32px;
+      border-radius: 48px;
+    }
+    .story-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .story-content p {
+      margin-bottom: 24px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .story-content h3 {
+      font-size: 1.8rem;
+      margin: 40px 0 20px;
+      color: var(--primary-red);
+    }
+    .story-content h4 {
+      font-size: 1.4rem;
+      margin: 28px 0 12px;
+      color: #9b3c28;
+    }
+
+    /* stats banner */
+    .stats-banner {
+      background: linear-gradient(135deg, #2d241f 0%, #1f1814 100%);
+      border-radius: 48px;
+      padding: 48px 32px;
+      margin: 48px 0;
+      color: white;
+    }
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      text-align: center;
+      gap: 32px;
+    }
+    .stat-item h4 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--primary-soft);
+      margin-bottom: 8px;
+    }
+    .stat-item p {
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    /* footer */
+    footer {
+      background: var(--footer-dark);
+      color: #e2dbd4;
+      padding: 48px 0 28px;
+      margin-top: 64px;
+      border-top: 5px solid var(--primary-red);
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-info h3 {
+      color: white;
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+    }
+    .footer-info p {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-info i {
+      width: 28px;
+      color: var(--primary-soft);
+    }
+    .footer-links {
+      display: flex;
+      gap: 64px;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: #d4cdc5;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--primary-soft);
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 28px;
+      border-top: 1px solid #3e3530;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 780px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .about-text h2 {
+        font-size: 2.2rem;
+      }
+      .stats-grid {
+        flex-direction: column;
+      }
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>OZONE FLORA HUB</h1>
+        <span>red passion · green future</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- About hero section with gardening/team spirit imagery -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-grid">
+        <div class="about-text">
+          <h2>Rooted in <span class="red-accent">Red Passion</span><br> Driven by Nature</h2>
+          <p>Ozone Flora Hub is more than a gardening platform — it’s a movement that celebrates the fierce beauty of red blooms, regenerative horticulture, and a community of passionate growers. We cultivate knowledge as much as we cultivate soil.</p>
+          <a href="#story" class="btn-primary" style="background: var(--primary-red); color:white; padding:12px 32px; border-radius:40px; text-decoration:none; font-weight:700; display:inline-block;">Discover Our Journey <i class="fas fa-leaf"></i></a>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=800&auto=format" alt="Gardeners working with red flowers">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & values cards -->
+  <div class="container">
+    <div class="section-header" style="margin-top: 64px;">
+      <h2 class="section-title">🌱 Our Core Principles</h2>
+      <p style="max-width: 700px; margin: 20px auto 0;">What fuels the red-threaded soul of Ozone Flora Hub — ethics, expertise, and eco-creativity.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3>Regenerative Ethics</h3>
+        <p>We champion organic practices, soil restoration, and carbon-conscious gardening. Every guide respects earth's cycles and biodiversity.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-palette"></i></div>
+        <h3>Red Aesthetic Legacy</h3>
+        <p>From crimson maples to scarlet salvias — we celebrate the dramatic, energizing power of red in gardens worldwide.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Knowledge for All</h3>
+        <p>Beginners to experts: we deliver 70k+ words of actionable, research-backed content, free workshops, and inclusive tools.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon"><i class="fas fa-globe-americas"></i></div>
+        <h3>Global Community</h3>
+        <p>Connecting gardeners across continents — sharing regional red plant varieties, climate tips, and cultural traditions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extensive story section ~ long form content about team & history (unique) -->
+  <div class="story-section" id="story">
+    <div class="container">
+      <div class="story-content">
+        <h3>📖 The Ozone Flora Hub Story: Where Crimson Dreams Took Root</h3>
+        <p>Founded in 2018 by head horticulturist Elena Vasquez and landscape designer Marcus Oka, Ozone Flora Hub began as a small urban nursery in the heart of California’s Central Coast. What started as a passion project—transforming a dusty lot into a tapestry of red poppies, heirloom tomatoes, and fiery salvias—blossomed into an international digital sanctuary for gardeners who believe that red is more than a color: it’s a statement of resilience, warmth, and ecological abundance. Our name pays homage to the thin layer of life-giving atmosphere (ozone) and the vibrant flora we nurture. Together, they symbolize protection, growth, and beauty.</p>
+        
+        <h4>🔥 The Red Thread Philosophy</h4>
+        <p>We didn't choose red by accident. In the plant world, red pigments (anthocyanins) protect foliage from stress, attract essential pollinators, and signal ripeness. For us, red represents the burning curiosity to learn, the courage to experiment, and the joy of harvesting. Our team believes that gardening with red intention — whether through edible ruby chard or through statement rose gardens — unlocks deeper connections with nature. Over the last 7 years, we've cultivated partnerships with botanical gardens, organic seed banks, and permaculture educators to bring you the most vibrant and practical horticultural wisdom on the web.</p>
+        
+        <h4>🌿 Milestones & Growth</h4>
+        <p>From our original 1,200 sq ft nursery, we now reach over 2 million gardeners annually through our digital library, newsletter, and red-themed design consultations. In 2021, we launched the "Red Refuge Project," donating 4,500 red-flowering native plants to school gardens and pollinator corridors. In 2023, Ozone Flora Hub became a certified B Corp candidate focusing on ethical content and carbon-negative shipping for our limited-edition seed collections. Our free online courses — "Crimson Canvas: Design with Reds" and "Tomato Masters" — have enrolled over 22,000 students globally.</p>
+        
+        <h4>👩‍🌾 Meet the Cultivators (Core Team)</h4>
+        <p>Behind every article, every plant profile, and every video tutorial is a diverse group of plant scientists, master gardeners, and storytellers. Elena (our "Red Queen") holds a master’s in plant biology from UC Davis and specializes in anthocyanin-rich cultivars. Marcus brings award-winning landscape architecture focused on drought-tolerant red themes. Our digital director, Priya Khanna, ensures that accessibility and inclusion remain central — offering content in multiple languages and audio formats. Additionally, we're supported by a global network of 14 volunteer regional ambassadors from Japan to Mexico, each sharing their local red-plant heritage. We meet monthly to exchange stories, test new compost techniques, and dream up the next big resource for our community.</p>
+        
+        <h4>📚 Beyond Gardening: Education & Advocacy</h4>
+        <p>Ozone Flora Hub is deeply committed to fighting climate anxiety through actionable hope. Our "Carbon Gardeners" series teaches how to manage home landscapes for carbon sequestration, emphasizing red maples and other deep-rooted perennials. We also run a mentorship program for aspiring horticulturists from underrepresented backgrounds, providing grants and paid internships. We believe that nurturing red blooms nurtures future environmental leaders. Every subscription, every resource download helps fund these initiatives.</p>
+        
+        <h4>🌎 Looking Forward: The Next Green Frontier</h4>
+        <p>In the coming years, we aim to open a physical demonstration farm — a “Red Oasis” — where visitors can walk through immersive gardens, attend in-person workshops, and witness regenerative farming first-hand. We’re also expanding our research into urban rooftop red-gardens and developing a mobile app that identifies red-pigmented plant health using AI. Through it all, we remain committed to our founding ethos: gardening as an act of love, rebellion against ecological apathy, and celebration of the color that makes the world feel alive. Join us, and let your garden tell a story in scarlet.</p>
+        <p><strong>“Every seed holds a spark. We’re here to help it burn brilliantly.” — Elena Vasquez, Co-founder.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team showcase gallery (real people / gardening experts) -->
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">❤️ Our Horticultural Hearts</h2>
+      <p>The passionate experts & storytellers behind Ozone Flora Hub</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&auto=format" alt="Elena Vasquez"></div>
+        <div class="team-info"><h3>Elena Vasquez</h3><div class="role">Founder & Chief Botanist</div><p>Plant physiologist, red-plant genetic enthusiast. Leads research & global red variety trials.</p></div>
+      </div>
+      <div class="team-member">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format" alt="Marcus Oka"></div>
+        <div class="team-info"><h3>Marcus Oka</h3><div class="role">Design Director</div><p>Award-winning landscape architect specializing in red-themed xeriscapes and edible forests.</p></div>
+      </div>
+      <div class="team-member">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=600&auto=format" alt="Priya Khanna"></div>
+        <div class="team-info"><h3>Priya Khanna</h3><div class="role">Digital Education Lead</div><p>Content strategist, community builder. Ensures inclusive gardening resources for all.</p></div>
+      </div>
+      <div class="team-member">
+        <div class="team-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format" alt="Diego Flores"></div>
+        <div class="team-info"><h3>Diego Flores</h3><div class="role">Senior Horticulturist</div><p>Expert in organic pest management and heirloom tomato preservation. 20+ years experience.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats banner (achievements) -->
+  <div class="container">
+    <div class="stats-banner">
+      <div class="stats-grid">
+        <div class="stat-item"><h4>78k+</h4><p>Words of Gardening Wisdom</p></div>
+        <div class="stat-item"><h4>450+</h4><p>Red Plant Profiles</p></div>
+        <div class="stat-item"><h4>22k+</h4><p>Course Graduates</p></div>
+        <div class="stat-item"><h4>2.1M</h4><p>Yearly Readers</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- extra call to action / join community -->
+  <div class="container" style="margin-bottom: 32px;">
+    <div style="background: #fff0ea; border-radius: 48px; padding: 48px 32px; text-align: center;">
+      <h3 style="font-size: 1.9rem; font-weight: 800; color: #c23b22;">Grow With Our Red Community</h3>
+      <p style="max-width: 600px; margin: 20px auto; font-size: 1.1rem;">Subscribe to our newsletter for seasonal red gardening tips, free planting calendars, and exclusive events.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <input type="email" placeholder="Your email address" style="padding: 14px 24px; border-radius: 60px; border: 1px solid #ffcdbc; width: 280px; font-family: inherit;">
+        <a href="#" class="btn-primary" style="background: var(--primary-red); padding: 14px 28px;">Join the Flock <i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Ozone Flora Hub</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 1420 Blossom Lane, Greenfield, CA 93923, USA</p>
+        <p><i class="fas fa-phone-alt"></i> +1 (888) 556-7842 | +1 (408) 779-3210</p>
+        <p><i class="fas fa-envelope"></i> hello@ozoneflorahub.com</p>
+      </div>
+      <div class="footer-links">
+        <ul><li><strong>Resources</strong></li><li><a href="#">Plant Library</a></li><li><a href="#">Red Theme Guides</a></li><li><a href="#">Workshops</a></li></ul>
+        <ul><li><strong>Support</strong></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">FAQs</a></li><li><a href="#">Shipping</a></li></ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2025 Ozone Flora Hub — Cultivating red passion & green wisdom. All images licensed via Unsplash.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

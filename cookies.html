@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ozone Flora Hub | Cookies Policy - Red Theme Gardening</title>
+  <meta name="description" content="Learn how Ozone Flora Hub uses cookies to enhance your gardening experience. Our cookie policy explains data practices, preferences, and your choices.">
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff9f7;
+      color: #2d2a24;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary-red: #c23b22;
+      --primary-dark: #9b2e1a;
+      --primary-soft: #e35f3e;
+      --accent-gold: #e6b422;
+      --light-red-bg: #fff2ef;
+      --gray-mild: #f5f0ed;
+      --footer-dark: #1f1b17;
+      --card-border: #ffe3da;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header identical to contact page */
+    .header {
+      background: white;
+      box-shadow: 0 6px 18px rgba(194, 59, 34, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 3px solid var(--primary-red);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 18px 0;
+    }
+    .logo h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--primary-red) 30%, #b94428 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .logo span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #7e6b5c;
+      display: block;
+      letter-spacing: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #2c2823;
+      transition: 0.2s;
+      font-size: 1.05rem;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary-red);
+      border-bottom: 2px solid var(--primary-red);
+      padding-bottom: 6px;
+    }
+
+    /* page hero */
+    .cookies-hero {
+      background: linear-gradient(107deg, #fff6f2 0%, #ffeae2 100%);
+      padding: 48px 0 56px;
+      border-bottom: 1px solid #ffe0d6;
+    }
+    .cookies-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #281f19;
+    }
+    .cookies-hero .red-accent {
+      color: var(--primary-red);
+    }
+    .cookies-hero p {
+      font-size: 1.2rem;
+      max-width: 780px;
+      margin-top: 16px;
+      color: #4a3e35;
+    }
+
+    /* policy content styling */
+    .policy-wrapper {
+      margin: 64px 0 80px;
+    }
+    .policy-card {
+      background: white;
+      border-radius: 32px;
+      padding: 40px 40px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--card-border);
+      margin-bottom: 48px;
+    }
+    .policy-card h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-red);
+      margin-bottom: 24px;
+      position: relative;
+      display: inline-block;
+    }
+    .policy-card h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--primary-red);
+      border-radius: 4px;
+    }
+    .policy-card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 28px 0 12px 0;
+      color: #3c2e27;
+    }
+    .policy-card p {
+      margin-bottom: 18px;
+      color: #3e3530;
+      line-height: 1.6;
+    }
+    .policy-card ul, .policy-card ol {
+      margin: 16px 0 20px 28px;
+      color: #3e3530;
+    }
+    .policy-card li {
+      margin-bottom: 8px;
+    }
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0 16px;
+      background: #fefaf8;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .cookie-table th, .cookie-table td {
+      border: 1px solid #ffe0d6;
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .cookie-table th {
+      background: #fff2ef;
+      font-weight: 700;
+      color: #c23b22;
+    }
+    .badge {
+      background: var(--light-red-bg);
+      color: var(--primary-dark);
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      display: inline-block;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+    .consent-box {
+      background: var(--light-red-bg);
+      border-radius: 28px;
+      padding: 28px 32px;
+      margin-top: 32px;
+      border-left: 6px solid var(--primary-red);
+    }
+    .btn-cookie {
+      background: var(--primary-red);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 16px;
+      margin-top: 12px;
+    }
+    .btn-outline-cookie {
+      background: transparent;
+      border: 2px solid var(--primary-red);
+      color: var(--primary-red);
+      padding: 10px 26px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-outline-cookie:hover {
+      background: var(--primary-red);
+      color: white;
+    }
+    .btn-cookie:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+    .cookie-notice-banner {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: #2d2a24;
+      color: #f5ede8;
+      border-radius: 60px;
+      padding: 14px 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      z-index: 1000;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.2);
+      border-left: 5px solid var(--primary-red);
+      backdrop-filter: blur(2px);
+      font-weight: 500;
+    }
+    .cookie-notice-banner button {
+      background: var(--primary-red);
+      border: none;
+      padding: 8px 22px;
+      border-radius: 40px;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .cookie-notice-banner button:hover {
+      background: var(--primary-soft);
+    }
+    @media (max-width: 680px) {
+      .cookie-notice-banner {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 24px;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .cookies-hero h1 {
+        font-size: 2rem;
+      }
+      .policy-card {
+        padding: 28px 20px;
+      }
+      .cookie-table th, .cookie-table td {
+        padding: 10px;
+        font-size: 0.85rem;
+      }
+    }
+
+    footer {
+      background: var(--footer-dark);
+      color: #e2dbd4;
+      padding: 48px 0 28px;
+      margin-top: 20px;
+      border-top: 5px solid var(--primary-red);
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-info h3 {
+      color: white;
+      font-size: 1.7rem;
+      margin-bottom: 12px;
+    }
+    .footer-info p {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-info i {
+      width: 28px;
+      color: var(--primary-soft);
+    }
+    .footer-links {
+      display: flex;
+      gap: 64px;
+    }
+    .footer-links ul {
+      list-style: none;
+    }
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    .footer-links a {
+      color: #d4cdc5;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: var(--primary-soft);
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 28px;
+      border-top: 1px solid #3e3530;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>OZONE FLORA HUB</h1>
+        <span>red passion · green future</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html" class="active">Cookies Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="cookies-hero">
+    <div class="container">
+      <h1>🍪 <span class="red-accent">Cookies & digital seeds</span></h1>
+      <p>Just like we nurture plants, we care about your privacy. This Cookies Policy explains how Ozone Flora Hub uses cookies, similar technologies, and how you can manage your preferences while browsing our red-themed garden universe.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="policy-wrapper">
+      <div class="policy-card">
+        <h2>What are cookies?</h2>
+        <p>Cookies are small text files stored on your device when you visit a website. They help us remember your preferences, understand how you interact with our content, and improve your gardening experience. Think of them as tiny <strong>digital seeds</strong> that make our site bloom just for you.</p>
+      </div>
+
+      <div class="policy-card">
+        <h2>How we use cookies</h2>
+        <p>At Ozone Flora Hub, we use cookies to enhance your journey through red-themed landscapes, plant guides, and workshop bookings. The categories we deploy include:</p>
+        <ul>
+          <li><strong>Essential cookies:</strong> Necessary for website functionality and security (e.g., navigation, form submissions).</li>
+          <li><strong>Performance & analytics:</strong> To count visits and traffic sources, so we can measure and improve our garden content.</li>
+          <li><strong>Functional cookies:</strong> Remember your preferences (language, region, saved favorite red perennials).</li>
+          <li><strong>Targeting cookies:</strong> Help deliver relevant gardening ads and workshop suggestions (only with your consent).</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <h2>Cookie inventory <span class="badge">updated 2025</span></h2>
+        <p>Below you'll find the main cookies used across Ozone Flora Hub. We regularly review them to ensure transparency.</p>
+        <table class="cookie-table">
+          <thead>
+            <tr><th>Cookie Name</th><th>Purpose</th><th>Duration</th><th>Type</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ofh_session</td><td>Essential for login sessions & form security (contact & newsletter)</td><td>Session</td><td>Necessary</td></tr>
+            <tr><td>garden_pref</td><td>Stores preferred red-theme layout & recent viewed plants</td><td>30 days</td><td>Functional</td></tr>
+            <tr><td>_ga_* (Google Analytics)</td><td>Helps us understand visitor behavior, popular garden guides</td><td>2 years</td><td>Analytics</td></tr>
+            <tr><td>flora_workshop_cal</td><td>Remembers upcoming workshop selections & calendar filters</td><td>7 days</td><td>Functional</td></tr>
+            <tr><td>red_petal_ads</td><td>Supports personalized gardening offers (opt-in only)</td><td>90 days</td><td>Targeting</td></tr>
+          </tbody>
+        </table>
+        <p>Third-party services (like embedded YouTube videos or map widgets) may also set cookies. We do not control those, but we recommend reviewing their policies.</p>
+      </div>
+
+      <div class="policy-card">
+        <h2>Your consent & choices</h2>
+        <p>When you first visit Ozone Flora Hub, you'll see a cookie banner where you can accept or customize non-essential cookies. You can change your mind anytime via the floating button below (opens preference panel).</p>
+        <div class="consent-box">
+          <i class="fas fa-hand-peace" style="font-size: 2rem; color: var(--primary-red); margin-right: 16px; float: left;"></i>
+          <h3 style="margin-top: 0;">Manage your cookie settings</h3>
+          <p>You can withdraw consent or adjust cookie categories (Analytics, Functional, Targeting) at any moment. Essential cookies will always remain active to keep the site running smoothly.</p>
+          <button id="openCookiePrefs" class="btn-cookie"><i class="fas fa-sliders-h"></i> Customize cookies</button>
+          <button id="acceptAllCookiesBtn" class="btn-outline-cookie"><i class="fas fa-check-circle"></i> Accept all</button>
+        </div>
+        <p>You can also configure cookies via your browser settings. Blocking certain cookies may affect some interactive features like workshop reminders or personalized garden recommendations.</p>
+      </div>
+
+      <div class="policy-card">
+        <h2>Updates to this policy</h2>
+        <p>Ozone Flora Hub may occasionally refresh this Cookies Policy to reflect new technologies or legal standards. We’ll always display the “effective date” at the bottom. Your continued use after changes means you accept the updated policy. In case of significant modifications, we will notify you with a notice on our website.</p>
+        <p><i class="fas fa-seedling" style="color: var(--primary-red); margin-right: 6px;"></i> <strong>Effective Date:</strong> March 21, 2026</p>
+      </div>
+
+      <div class="policy-card">
+        <h2>More questions? Rooted here for you</h2>
+        <p>If you have any questions about our cookie practices or your data privacy, please reach out to our Data Protection team. We’re as passionate about protecting your data as we are about growing crimson roses.</p>
+        <p><i class="fas fa-envelope" style="color: var(--primary-red);"></i> <a href="mailto:privacy@ozoneflorahub.com" style="color: var(--primary-red); font-weight: 600;">privacy@ozoneflorahub.com</a>  |  <i class="fas fa-phone-alt"></i> +1 (888) 556-7842</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- extra gardening insight: why cookies matter to eco-conscious gardeners -->
+  <div class="container" style="margin: 0 auto 64px;">
+    <div style="background: #FFF2EF; border-radius: 48px; padding: 32px 28px; text-align: center;">
+      <i class="fas fa-cookie-bite" style="font-size: 2.2rem; color: var(--primary-red); margin-bottom: 12px; display: inline-block;"></i>
+      <h3 style="font-weight: 700; font-size: 1.5rem;">🌿 Transparent digital ecosystem</h3>
+      <p style="max-width: 780px; margin: 12px auto 0;">Our cookie usage aligns with our green philosophy: honesty, minimal footprint, and giving you control. Like a well-tended garden, your data is treated with care and respect.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Ozone Flora Hub</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 1420 Blossom Lane, Greenfield, CA 93923, USA</p>
+        <p><i class="fas fa-phone-alt"></i> +1 (888) 556-7842 | +1 (408) 779-3210</p>
+        <p><i class="fas fa-envelope"></i> hello@ozoneflorahub.com</p>
+      </div>
+      <div class="footer-links">
+        <ul><li><strong>Resources</strong></li><li><a href="#">Plant Library</a></li><li><a href="#">Red Theme Guides</a></li><li><a href="#">Workshops</a></li></ul>
+        <ul><li><strong>Support</strong></li><li><a href="contact.html">Contact Us</a></li><li><a href="#">FAQs</a></li><li><a href="cookies.html">Cookies Policy</a></li></ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>© 2026 Ozone Flora Hub — Cultivating red passion & green wisdom. Respect your privacy as we respect nature.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- floating cookie consent simulation banner (interactive for demo) -->
+<div id="cookieBanner" class="cookie-notice-banner" style="display: flex;">
+  <div><i class="fas fa-cookie"></i> 🌸 We use cookies to personalize your garden experience, analyze site traffic, and show relevant red-themed content. By clicking “Accept”, you agree to our cookies.</div>
+  <div style="display: flex; gap: 12px;">
+    <button id="acceptBannerBtn">Accept all</button>
+    <button id="customizeBannerBtn" style="background: #4a3e35;">Preferences</button>
+  </div>
+</div>
+
+<!-- cookie preference modal (lightweight) + integrated localStorage for demo -->
+<div id="cookieModal" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); z-index: 2000; align-items: center; justify-content: center;">
+  <div style="background: white; max-width: 500px; width: 90%; border-radius: 48px; padding: 32px; box-shadow: 0 25px 40px rgba(0,0,0,0.3);">
+    <h3 style="font-size: 1.7rem; color: var(--primary-red); margin-bottom: 12px;">🍪 Cookie preferences</h3>
+    <p>Select which categories you want to allow. Essential cookies are always active to ensure our site functions properly.</p>
+    <div style="margin: 24px 0;">
+      <label style="display: flex; justify-content: space-between; margin-bottom: 20px;"><span><strong>Essential cookies</strong> (always active)</span> <span style="background:#eee; padding:4px 12px; border-radius: 30px;">Required</span></label>
+      <label style="display: flex; justify-content: space-between; margin-bottom: 20px;"><span><strong>Analytics / Performance</strong></span> <input type="checkbox" id="prefAnalytics" checked> </label>
+      <label style="display: flex; justify-content: space-between; margin-bottom: 20px;"><span><strong>Functional cookies</strong> (remember preferences)</span> <input type="checkbox" id="prefFunctional" checked> </label>
+      <label style="display: flex; justify-content: space-between;"><span><strong>Targeting / Advertising</strong></span> <input type="checkbox" id="prefTargeting"> </label>
+    </div>
+    <div style="display: flex; gap: 16px; justify-content: flex-end;">
+      <button id="savePrefsBtn" class="btn-cookie" style="padding: 10px 22px;">Save preferences</button>
+      <button id="closeModalBtn" style="background: none; border: none; font-weight: 600; cursor: pointer;">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    // cookie banner + modal logic
+    const banner = document.getElementById('cookieBanner');
+    const modal = document.getElementById('cookieModal');
+    const acceptBanner = document.getElementById('acceptBannerBtn');
+    const customizeBanner = document.getElementById('customizeBannerBtn');
+    const openPrefsBtn = document.getElementById('openCookiePrefs');
+    const acceptAllBtnPage = document.getElementById('acceptAllCookiesBtn');
+    const savePrefs = document.getElementById('savePrefsBtn');
+    const closeModal = document.getElementById('closeModalBtn');
+
+    // check if user has already consented (simulate localStorage)
+    let cookiesConsented = localStorage.getItem('ofh_cookie_consent');
+    if (cookiesConsented === 'accepted_all') {
+      banner.style.display = 'none';
+    } else if (cookiesConsented === 'customized') {
+      banner.style.display = 'none';
+    } else {
+      banner.style.display = 'flex';   // show banner
+    }
+
+    function hideBanner() {
+      banner.style.display = 'none';
+    }
+
+    function acceptAllCookies() {
+      localStorage.setItem('ofh_cookie_consent', 'accepted_all');
+      // set all checkboxes to true if modal open but irrelevant
+      if (modal.style.display === 'flex') {
+        document.getElementById('prefAnalytics').checked = true;
+        document.getElementById('prefFunctional').checked = true;
+        document.getElementById('prefTargeting').checked = true;
+      }
+      hideBanner();
+      showSuccessToast('All cookies accepted. Enjoy your personalized garden journey! 🌿');
+    }
+
+    function showSuccessToast(msg) {
+      // lightweight notification simulation
+      let toast = document.createElement('div');
+      toast.innerText = msg;
+      toast.style.position = 'fixed';
+      toast.style.bottom = '100px';
+      toast.style.right = '24px';
+      toast.style.backgroundColor = '#1f6e43';
+      toast.style.color = 'white';
+      toast.style.padding = '12px 24px';
+      toast.style.borderRadius = '60px';
+      toast.style.fontWeight = '500';
+      toast.style.zIndex = '3000';
+      toast.style.boxShadow = '0 6px 14px rgba(0,0,0,0.1)';
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.remove(); }, 3000);
+    }
+
+    function openCustomModal() {
+      // sync checkboxes with current localStorage state? if customized or all, reflect.
+      const consent = localStorage.getItem('ofh_cookie_consent');
+      if (consent === 'accepted_all') {
+        document.getElementById('prefAnalytics').checked = true;
+        document.getElementById('prefFunctional').checked = true;
+        document.getElementById('prefTargeting').checked = true;
+      } else if (consent === 'customized') {
+        // retrieve from separate keys
+        const analytics = localStorage.getItem('ofh_pref_analytics') === 'true';
+        const functional = localStorage.getItem('ofh_pref_functional') === 'true';
+        const targeting = localStorage.getItem('ofh_pref_targeting') === 'true';
+        document.getElementById('prefAnalytics').checked = analytics !== false ? true : false;
+        document.getElementById('prefFunctional').checked = functional !== false ? true : false;
+        document.getElementById('prefTargeting').checked = targeting === true;
+      } else {
+        // default values: analytics + functional true, targeting false
+        document.getElementById('prefAnalytics').checked = true;
+        document.getElementById('prefFunctional').checked = true;
+        document.getElementById('prefTargeting').checked = false;
+      }
+      modal.style.display = 'flex';
+    }
+
+    function saveCustomPreferences() {
+      const analytics = document.getElementById('prefAnalytics').checked;
+      const functional = document.getElementById('prefFunctional').checked;
+      const targeting = document.getElementById('prefTargeting').checked;
+      localStorage.setItem('ofh_cookie_consent', 'customized');
+      localStorage.setItem('ofh_pref_analytics', analytics);
+      localStorage.setItem('ofh_pref_functional', functional);
+      localStorage.setItem('ofh_pref_targeting', targeting);
+      hideBanner();
+      modal.style.display = 'none';
+      showSuccessToast('Your cookie preferences have been saved. Thank you!');
+      // For demonstration, we also log the preferences
+      console.log('Cookie prefs saved:', { analytics, functional, targeting });
+    }
+
+    // Event listeners
+    if (acceptBanner) acceptBanner.addEventListener('click', acceptAllCookies);
+    if (customizeBanner) customizeBanner.addEventListener('click', openCustomModal);
+    if (openPrefsBtn) openPrefsBtn.addEventListener('click', openCustomModal);
+    if (acceptAllBtnPage) acceptAllBtnPage.addEventListener('click', acceptAllCookies);
+    if (savePrefs) savePrefs.addEventListener('click', saveCustomPreferences);
+    if (closeModal) closeModal.addEventListener('click', () => { modal.style.display = 'none'; });
+
+    // if user clicks outside modal to close (basic)
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+    });
+
+    // ensure banner hidden if already consented 
+    if (cookiesConsented === 'accepted_all' || cookiesConsented === 'customized') {
+      banner.style.display = 'none';
+    }
+  })();
+</script>
+</body>
+</html>
